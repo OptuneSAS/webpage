@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
             bottom: 24px;
             right: 24px;
             padding: 16px 24px;
-            background: ${type === 'success' ? '#0D9488' : '#DC2626'};
+            background: ${type === 'success' ? '#00aeef' : '#DC2626'};
             color: white;
             border-radius: 10px;
             display: flex;
@@ -244,9 +244,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentScroll = window.pageYOffset;
         
         if (currentScroll > 100) {
-            header.style.background = 'rgba(10, 22, 40, 0.98)';
+            header.style.background = 'rgba(12, 28, 43, 0.98)';
         } else {
-            header.style.background = 'rgba(10, 22, 40, 0.9)';
+            header.style.background = 'rgba(12, 28, 43, 0.9)';
         }
         
         lastScroll = currentScroll;
