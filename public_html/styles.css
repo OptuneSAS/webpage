@@ -258,6 +258,7 @@ img {
 
 .hero-content {
     position: relative;
+    z-index: 2;
     text-align: center;
     max-width: 900px;
     margin: 0 auto;
@@ -314,6 +315,8 @@ img {
 
 /* Stats */
 .stats-container {
+    position: relative;
+    z-index: 2;
     margin-top: 80px;
     padding-top: 40px;
     border-top: 1px solid var(--color-border);
@@ -791,8 +794,72 @@ img {
 }
 
 /* ========================================
-   ANIMATIONS
+   BACKGROUND PATHS ANIMATION
    ======================================== */
+.background-paths {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+.paths-svg {
+    width: 100%;
+    height: 100%;
+    min-width: 1200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Slow flowing animation for path groups */
+.paths-group-1 .path-line {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: drawPath 8s ease-in-out forwards, shimmer 4s ease-in-out infinite;
+    animation-delay: calc(var(--i, 0) * 0.5s);
+}
+
+.paths-group-2 .path-line {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: drawPath 10s ease-in-out forwards, shimmer 4s ease-in-out infinite;
+    animation-delay: calc(var(--i, 0) * 0.4s);
+}
+
+/* Individual path delays */
+.paths-group-1 .path-line:nth-child(1) { --i: 0; }
+.paths-group-1 .path-line:nth-child(2) { --i: 1; }
+.paths-group-1 .path-line:nth-child(3) { --i: 2; }
+.paths-group-1 .path-line:nth-child(4) { --i: 3; }
+.paths-group-1 .path-line:nth-child(5) { --i: 4; }
+
+.paths-group-2 .path-line:nth-child(1) { --i: 0; }
+.paths-group-2 .path-line:nth-child(2) { --i: 1; }
+.paths-group-2 .path-line:nth-child(3) { --i: 2; }
+.paths-group-2 .path-line:nth-child(4) { --i: 3; }
+.paths-group-2 .path-line:nth-child(5) { --i: 4; }
+
+.path-dot {
+    filter: drop-shadow(0 0 6px rgba(0, 174, 239, 0.5));
+}
+
+@keyframes drawPath {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes shimmer {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+}
+
+/* ANIMATIONS */
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }

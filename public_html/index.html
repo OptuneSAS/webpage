@@ -54,6 +54,57 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-bg"></div>
+            <!-- Background Paths Animation -->
+            <div class="background-paths" aria-hidden="true">
+                <svg class="paths-svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="pathGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#00aeef" stop-opacity="0.15" />
+                            <stop offset="50%" stop-color="#00fff7" stop-opacity="0.08" />
+                            <stop offset="100%" stop-color="#00aeef" stop-opacity="0.15" />
+                        </linearGradient>
+                        <linearGradient id="pathGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#00fff7" stop-opacity="0.1" />
+                            <stop offset="50%" stop-color="#00aeef" stop-opacity="0.05" />
+                            <stop offset="100%" stop-color="#00fff7" stop-opacity="0.1" />
+                        </linearGradient>
+                    </defs>
+                    <!-- Path Group 1 - Flowing left to right -->
+                    <g class="paths-group paths-group-1">
+                        <path class="path-line" d="M-100,200 Q200,100 500,250 T1100,200" stroke="url(#pathGrad1)" stroke-width="1.5" fill="none" />
+                        <path class="path-line" d="M-100,260 Q250,160 550,310 T1150,260" stroke="url(#pathGrad1)" stroke-width="1" fill="none" />
+                        <path class="path-line" d="M-100,320 Q300,220 600,370 T1200,320" stroke="url(#pathGrad1)" stroke-width="0.8" fill="none" />
+                        <path class="path-line" d="M-100,380 Q350,280 650,430 T1250,380" stroke="url(#pathGrad1)" stroke-width="0.6" fill="none" />
+                        <path class="path-line" d="M-100,440 Q400,340 700,490 T1300,440" stroke="url(#pathGrad1)" stroke-width="0.5" fill="none" />
+                    </g>
+                    <!-- Path Group 2 - Flowing right to left -->
+                    <g class="paths-group paths-group-2">
+                        <path class="path-line" d="M1300,100 Q1000,0 700,150 T-100,100" stroke="url(#pathGrad2)" stroke-width="1.5" fill="none" />
+                        <path class="path-line" d="M1350,160 Q1050,60 750,210 T-50,160" stroke="url(#pathGrad2)" stroke-width="1" fill="none" />
+                        <path class="path-line" d="M1400,220 Q1100,120 800,270 T0,220" stroke="url(#pathGrad2)" stroke-width="0.8" fill="none" />
+                        <path class="path-line" d="M1450,280 Q1150,180 850,330 T50,280" stroke="url(#pathGrad2)" stroke-width="0.6" fill="none" />
+                        <path class="path-line" d="M1500,340 Q1200,240 900,390 T100,340" stroke="url(#pathGrad2)" stroke-width="0.5" fill="none" />
+                    </g>
+                    <!-- Path dots -->
+                    <g class="paths-dots">
+                        <circle class="path-dot" r="2" fill="#00aeef" opacity="0.6">
+                            <animateMotion dur="12s" repeatCount="indefinite" path="M-100,200 Q200,100 500,250 T1100,200" />
+                        </circle>
+                        <circle class="path-dot" r="1.5" fill="#00fff7" opacity="0.5">
+                            <animateMotion dur="15s" repeatCount="indefinite" path="M-100,320 Q300,220 600,370 T1200,320" />
+                        </circle>
+                        <circle class="path-dot" r="2.5" fill="#00aeef" opacity="0.4">
+                            <animateMotion dur="18s" repeatCount="indefinite" path="M1300,100 Q1000,0 700,150 T-100,100" />
+                        </circle>
+                        <circle class="path-dot" r="1.8" fill="#00fff7" opacity="0.5">
+                            <animateMotion dur="14s" repeatCount="indefinite" path="M1400,220 Q1100,120 800,270 T0,220" />
+                        </circle>
+                        <circle class="path-dot" r="1.2" fill="#00aeef" opacity="0.7">
+                            <animateMotion dur="20s" repeatCount="indefinite" path="M-100,440 Q400,340 700,490 T1300,440" />
+                        </circle>
+                    </g>
+                </svg>
+            </div>
             <div class="container hero-content">
                 <span class="badge">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
