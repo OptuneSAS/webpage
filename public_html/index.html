@@ -8,389 +8,464 @@
     <meta name="author" content="Optune S.A.S.">
     <meta name="robots" content="index, follow">
     
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://optune.com/">
     <meta property="og:title" content="Optune - Soluciones Empresariales con IA">
     <meta property="og:description" content="Automatización para empresas en crecimiento. Desbloquea el poder de la IA para optimizar tus operaciones.">
     
-    <title>Optune - Soluciones Empresariales con IA</title>
+    <title>Optune — Soluciones Empresariales con IA</title>
     
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <!-- Header / Navigation -->
-    <header class="header">
-        <div class="container header-content">
-            <a href="#" class="logo">
-                <img src="./assets/OptuneLogo.jpg" alt="Logo" class="logo-image">
+
+    <!-- ═══════════════════════════════════
+         NAVBAR
+         ═══════════════════════════════════ -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="./assets/OptuneLogo.jpg" alt="Optune" class="nav-logo-img">
             </a>
-            <nav class="nav-desktop">
+            <div class="nav-links" id="navLinks">
                 <a href="#servicios" class="nav-link">Servicios</a>
                 <a href="#nosotros" class="nav-link">Nosotros</a>
+                <a href="#testimonios" class="nav-link">Testimonios</a>
                 <a href="#contacto" class="nav-link">Contacto</a>
-                <a href="#contacto" class="btn btn-primary">Solicitar Demo</a>
-            </nav>
-            <button class="mobile-menu-btn" aria-label="Abrir menú">
+                <a href="#contacto" class="btn-neon">
+                    <span class="btn-neon-text">Solicitar Demo</span>
+                    <span class="btn-neon-reflex"></span>
+                </a>
+            </div>
+            <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
         </div>
-        <!-- Mobile Navigation -->
-        <nav class="nav-mobile">
-            <a href="#servicios" class="nav-link">Servicios</a>
-            <a href="#nosotros" class="nav-link">Nosotros</a>
-            <a href="#contacto" class="nav-link">Contacto</a>
-            <a href="#contacto" class="btn btn-primary">Solicitar Demo</a>
-        </nav>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-bg"></div>
-            <!-- Background Paths Animation -->
-            <div class="background-paths" aria-hidden="true">
-                <svg class="paths-svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="pathGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#00aeef" stop-opacity="0.15" />
-                            <stop offset="50%" stop-color="#00fff7" stop-opacity="0.08" />
-                            <stop offset="100%" stop-color="#00aeef" stop-opacity="0.15" />
-                        </linearGradient>
-                        <linearGradient id="pathGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" stop-color="#00fff7" stop-opacity="0.1" />
-                            <stop offset="50%" stop-color="#00aeef" stop-opacity="0.05" />
-                            <stop offset="100%" stop-color="#00fff7" stop-opacity="0.1" />
-                        </linearGradient>
-                    </defs>
-                    <!-- Path Group 1 - Flowing left to right -->
-                    <g class="paths-group paths-group-1">
-                        <path class="path-line" d="M-100,200 Q200,100 500,250 T1100,200" stroke="url(#pathGrad1)" stroke-width="1.5" fill="none" />
-                        <path class="path-line" d="M-100,260 Q250,160 550,310 T1150,260" stroke="url(#pathGrad1)" stroke-width="1" fill="none" />
-                        <path class="path-line" d="M-100,320 Q300,220 600,370 T1200,320" stroke="url(#pathGrad1)" stroke-width="0.8" fill="none" />
-                        <path class="path-line" d="M-100,380 Q350,280 650,430 T1250,380" stroke="url(#pathGrad1)" stroke-width="0.6" fill="none" />
-                        <path class="path-line" d="M-100,440 Q400,340 700,490 T1300,440" stroke="url(#pathGrad1)" stroke-width="0.5" fill="none" />
-                    </g>
-                    <!-- Path Group 2 - Flowing right to left -->
-                    <g class="paths-group paths-group-2">
-                        <path class="path-line" d="M1300,100 Q1000,0 700,150 T-100,100" stroke="url(#pathGrad2)" stroke-width="1.5" fill="none" />
-                        <path class="path-line" d="M1350,160 Q1050,60 750,210 T-50,160" stroke="url(#pathGrad2)" stroke-width="1" fill="none" />
-                        <path class="path-line" d="M1400,220 Q1100,120 800,270 T0,220" stroke="url(#pathGrad2)" stroke-width="0.8" fill="none" />
-                        <path class="path-line" d="M1450,280 Q1150,180 850,330 T50,280" stroke="url(#pathGrad2)" stroke-width="0.6" fill="none" />
-                        <path class="path-line" d="M1500,340 Q1200,240 900,390 T100,340" stroke="url(#pathGrad2)" stroke-width="0.5" fill="none" />
-                    </g>
-                    <!-- Path dots -->
-                    <g class="paths-dots">
-                        <circle class="path-dot" r="2" fill="#00aeef" opacity="0.6">
-                            <animateMotion dur="12s" repeatCount="indefinite" path="M-100,200 Q200,100 500,250 T1100,200" />
-                        </circle>
-                        <circle class="path-dot" r="1.5" fill="#00fff7" opacity="0.5">
-                            <animateMotion dur="15s" repeatCount="indefinite" path="M-100,320 Q300,220 600,370 T1200,320" />
-                        </circle>
-                        <circle class="path-dot" r="2.5" fill="#00aeef" opacity="0.4">
-                            <animateMotion dur="18s" repeatCount="indefinite" path="M1300,100 Q1000,0 700,150 T-100,100" />
-                        </circle>
-                        <circle class="path-dot" r="1.8" fill="#00fff7" opacity="0.5">
-                            <animateMotion dur="14s" repeatCount="indefinite" path="M1400,220 Q1100,120 800,270 T0,220" />
-                        </circle>
-                        <circle class="path-dot" r="1.2" fill="#00aeef" opacity="0.7">
-                            <animateMotion dur="20s" repeatCount="indefinite" path="M-100,440 Q400,340 700,490 T1300,440" />
-                        </circle>
-                    </g>
-                </svg>
+    <!-- ═══════════════════════════════════
+         HERO — SHADER BACKGROUND
+         ═══════════════════════════════════ -->
+    <section class="hero" id="hero">
+        <canvas id="shaderCanvas"></canvas>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge" id="heroBadge">
+                <span class="hero-badge-dot"></span>
+                Soluciones Empresariales con IA
             </div>
-            <div class="container hero-content">
-                <span class="badge">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                        <path d="M2 17l10 5 10-5"/>
-                        <path d="M2 12l10 5 10-5"/>
-                    </svg>
-                    Soluciones Empresariales con IA
-                </span>
-                <h1 class="hero-title">
-                    Automatización para<br>
-                    <span class="gradient-text">Empresas en Crecimiento</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Desbloquea el poder de la IA para optimizar tus operaciones. Desde servicio al cliente hasta gestión de inventarios, hacemos la tecnología de vanguardia accesible para pequeñas y medianas empresas.
+            <h1 class="hero-title" id="heroTitle">
+                Automatizacion para<br>
+                <span class="gradient-text">Empresas en Crecimiento</span>
+            </h1>
+            <p class="hero-desc" id="heroDesc">
+                Desbloquea el poder de la IA para optimizar tus operaciones. 
+                Desde servicio al cliente hasta gestion de inventarios, hacemos 
+                la tecnologia de vanguardia accesible para pequenas y medianas empresas.
+            </p>
+            <div class="hero-actions" id="heroActions">
+                <a href="#contacto" class="btn-magnetic" id="btnDemo">
+                    <span class="btn-magnetic-inner">Solicitar Demo</span>
+                </a>
+                <a href="#servicios" class="btn-outline">Conocer Mas</a>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-value" data-count="100">0</span>
+                <span class="stat-suffix">%</span>
+                <span class="stat-label">Listo para Automatizar</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">24/7</span>
+                <span class="stat-label">Operaciones con IA</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">PyMEs</span>
+                <span class="stat-label">Soluciones Enfocadas</span>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span class="scroll-mouse">
+                <span class="scroll-dot"></span>
+            </span>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         SERVICES — SPOTLIGHT CARDS
+         ═══════════════════════════════════ -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-tag">Nuestros Servicios</span>
+                <h2 class="section-title">Soluciones que <span class="gradient-text">Escalan Contigo</span></h2>
+                <p class="section-desc">
+                    Proveemos herramientas integrales potenciadas por IA disenadas especificamente 
+                    para pequenas y medianas empresas listas para abrazar el futuro de las operaciones.
                 </p>
-                <div class="hero-buttons">
-                    <a href="#contacto" class="btn btn-primary btn-lg">
-                        Solicitar Demo
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            </div>
+
+            <div class="services-grid">
+                <article class="service-card" data-index="0">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Automatizacion de Servicio al Cliente</h3>
+                    <p class="card-desc">Chatbots y sistemas de soporte potenciados por IA que atienden consultas 24/7, mejorando tiempos de respuesta y satisfaccion del cliente.</p>
+                    <span class="card-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
-                    </a>
-                    <a href="#servicios" class="btn btn-secondary btn-lg">Conocer Más</a>
-                </div>
-            </div>
-            <!-- Stats -->
-            <div class="container stats-container">
-                <div class="stats">
-                    <div class="stat-item">
-                        <span class="stat-value">100%</span>
-                        <span class="stat-label">Listo para Automatizar</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-value">24/7</span>
-                        <span class="stat-label">Operaciones con IA</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-value">PyMEs</span>
-                        <span class="stat-label">Soluciones Enfocadas</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+                    </span>
+                </article>
 
-        <!-- Services Section -->
-        <section id="servicios" class="services">
-            <div class="container">
-                <span class="section-label">Nuestros Servicios</span>
-                <h2 class="section-title">Soluciones que Escalan Contigo</h2>
-                <p class="section-subtitle">
-                    Proveemos herramientas integrales potenciadas por IA diseñadas específicamente para pequeñas y medianas empresas listas para abrazar el futuro de las operaciones.
-                </p>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                            </svg>
-                        </div>
-                        <h3 class="service-title">Automatización de Servicio al Cliente</h3>
-                        <p class="service-desc">Chatbots y sistemas de soporte potenciados por IA que atienden consultas 24/7, mejorando tiempos de respuesta y satisfacción del cliente.</p>
+                <article class="service-card" data-index="1">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="1" y="3" width="15" height="13" rx="2"/>
+                            <path d="M16 8h4a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-1"/>
+                        </svg>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="1" y="3" width="15" height="13" rx="2"/>
-                                <path d="M16 8h4a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-1"/>
-                            </svg>
-                        </div>
-                        <h3 class="service-title">Gestión Automática de Pedidos</h3>
-                        <p class="service-desc">Digitalizamos y automatizamos el proceso de recepción de pedidos, eliminando la intervención manual y reduciendo errores operativos.</p>
+                    <h3 class="card-title">Gestion Automatica de Pedidos</h3>
+                    <p class="card-desc">Digitalizamos y automatizamos el proceso de recepcion de pedidos, eliminando la intervencion manual y reduciendo errores operativos.</p>
+                    <span class="card-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </article>
+
+                <article class="service-card" data-index="2">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M20 7h-9"/>
+                            <path d="M14 17H5"/>
+                            <circle cx="17" cy="17" r="3"/>
+                            <circle cx="7" cy="7" r="3"/>
+                        </svg>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 7h-9"/>
-                                <path d="M14 17H5"/>
-                                <circle cx="17" cy="17" r="3"/>
-                                <circle cx="7" cy="7" r="3"/>
-                            </svg>
-                        </div>
-                        <h3 class="service-title">Gestión de Inventarios</h3>
-                        <p class="service-desc">Seguimiento inteligente de stock y pronóstico de demanda para optimizar niveles de inventario, reducir desperdicios y prevenir faltantes.</p>
+                    <h3 class="card-title">Gestion de Inventarios</h3>
+                    <p class="card-desc">Seguimiento inteligente de stock y pronostico de demanda para optimizar niveles de inventario, reducir desperdicios y prevenir faltantes.</p>
+                    <span class="card-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </article>
+
+                <article class="service-card" data-index="3">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
+                            <path d="M8 21h8"/>
+                            <path d="M12 17v4"/>
+                        </svg>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="3" width="20" height="14" rx="2"/>
-                                <path d="M8 21h8"/>
-                                <path d="M12 17v4"/>
-                            </svg>
-                        </div>
-                        <h3 class="service-title">Operaciones Empresariales</h3>
-                        <p class="service-desc">Automatización de procesos de extremo a extremo que conecta tus sistemas, elimina tareas manuales y escala con tu crecimiento.</p>
+                    <h3 class="card-title">Operaciones Empresariales</h3>
+                    <p class="card-desc">Automatizacion de procesos de extremo a extremo que conecta tus sistemas, elimina tareas manuales y escala con tu crecimiento.</p>
+                    <span class="card-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </article>
+
+                <article class="service-card" data-index="4">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                        </svg>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="3"/>
-                                <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-                            </svg>
-                        </div>
-                        <h3 class="service-title">Asistentes con IA</h3>
-                        <p class="service-desc">Asistentes de IA personalizados entrenados con los datos de tu negocio para ayudar a los empleados a trabajar más rápido y tomar mejores decisiones.</p>
+                    <h3 class="card-title">Asistentes con IA</h3>
+                    <p class="card-desc">Asistentes de IA personalizados entrenados con los datos de tu negocio para ayudar a los empleados a trabajar mas rapido y tomar mejores decisiones.</p>
+                    <span class="card-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </article>
+
+                <article class="service-card" data-index="5">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-                            </svg>
-                        </div>
-                        <h3 class="service-title">Optimización de Procesos</h3>
-                        <p class="service-desc">Identifica cuellos de botella e ineficiencias en tus flujos de trabajo, luego automatiza soluciones que entregan resultados medibles.</p>
-                    </div>
-                </div>
+                    <h3 class="card-title">Optimizacion de Procesos</h3>
+                    <p class="card-desc">Identifica cuellos de botella e ineficiencias en tus flujos de trabajo, luego automatiza soluciones que entregan resultados medibles.</p>
+                    <span class="card-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </article>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- About Section -->
-        <section id="nosotros" class="about">
-            <div class="container">
-                <span class="section-label">Nosotros</span>
-                <h2 class="section-title">Jóvenes Innovadores,<br><span class="gradient-text">Soluciones Comprobadas</span></h2>
-                <p class="section-subtitle about-intro">
-                    Somos un equipo de jóvenes emprendedores unidos por una visión compartida: hacer que la tecnología avanzada sea accesible para cada empresa, sin importar su tamaño.
-                </p>
-                <p class="section-subtitle">
-                    Formados en algunas de las mejores universidades del país en carreras como ingeniería matemática y ciencia de datos, nuestra perspectiva fresca y dedicación a la excelencia nos impulsan a demostrar que las soluciones innovadoras no requieren grandes presupuestos—solo la asociación correcta.
-                </p>
-                
-                <div class="values-grid">
-                    <div class="value-card">
-                        <h4 class="value-title">Orientados a la Misión</h4>
-                        <p class="value-desc">Tecnología para todos los tamaños</p>
-                    </div>
-                    <div class="value-card">
-                        <h4 class="value-title">Innovadores</h4>
-                        <p class="value-desc">Ideas frescas, soluciones modernas</p>
-                    </div>
-                    <div class="value-card">
-                        <h4 class="value-title">Colaborativos</h4>
-                        <p class="value-desc">Socios en tu éxito</p>
-                    </div>
-                    <div class="value-card">
-                        <h4 class="value-title">Formación de Excelencia</h4>
-                        <p class="value-desc">Preparados para los retos del futuro</p>
-                    </div>
-                </div>
+    <!-- ═══════════════════════════════════
+         ABOUT — WITH PARALLAX
+         ═══════════════════════════════════ -->
+    <section class="about" id="nosotros">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-tag">Nosotros</span>
+                <h2 class="section-title">Jovenes Innovadores,<br><span class="gradient-text">Soluciones Comprobadas</span></h2>
+            </div>
 
-                <div class="vision-box">
-                    <h3 class="vision-title">Nuestra Visión</h3>
-                    <blockquote class="vision-quote">
-                        "Abrir las puertas para que todo tipo de empresas entren a la nueva era de la tecnología, se mantengan competitivas, y escalen sus operaciones con tecnologías y oportunidades accesibles para todos."
-                    </blockquote>
-                    <p class="vision-text">
-                        Creemos que toda empresa—ya sea una tienda local o una empresa en crecimiento—merece acceso a las mismas herramientas poderosas que impulsan a los líderes de la industria. Por eso construimos soluciones efectivas, accesibles y adaptadas a tus necesidades.
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="about-paragraph">
+                        Somos un equipo de jovenes emprendedores unidos por una vision compartida: 
+                        hacer que la tecnologia avanzada sea accesible para cada empresa, sin importar su tamano.
+                    </p>
+                    <p class="about-paragraph">
+                        Formados en algunas de las mejores universidades del pais en carreras como 
+                        ingenieria matematica y ciencia de datos, nuestra perspectiva fresca y dedicacion 
+                        a la excelencia nos impulsan a demostrar que las soluciones innovadoras no requieren 
+                        grandes presupuestos &mdash; solo la asociacion correcta.
                     </p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contacto" class="contact">
-            <div class="container">
-                <span class="section-label">Contáctanos</span>
-                <h2 class="section-title">¿Listo para Transformar<br><span class="gradient-text">Tu Negocio?</span></h2>
-                <p class="section-subtitle">
-                    Hablemos sobre cómo la automatización con IA puede ayudar a tu negocio a crecer. Solicita una demo y descubre de primera mano cómo nuestras soluciones pueden optimizar tus operaciones.
-                </p>
-
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <span class="contact-label">Escríbenos a</span>
-                            <a href="mailto:optune@optune.tech" class="contact-value">optune@optune.tech</a>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-label">Tiempo de respuesta</span>
-                            <span class="contact-value">Dentro de 24 horas</span>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-label">Atendemos</span>
-                            <span class="contact-value">Empresas en Colombia y Latinoamérica</span>
-                        </div>
+                <div class="about-values">
+                    <div class="value-chip">
+                        <span class="value-chip-icon">&#9650;</span>
+                        Orientados a la Mision
                     </div>
-                    <div class="contact-form-container">
-                        <h3 class="form-title">Solicitar una Demo</h3>
-                        <form id="contact-form" class="contact-form">
-                            <div class="form-group">
-                                <label for="nombre">Nombre</label>
-                                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required placeholder="tu@empresa.com">
-                            </div>
-                            <div class="form-group">
-                                <label for="empresa">Empresa</label>
-                                <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa">
-                            </div>
-                            <div class="form-group">
-                                <label for="mensaje">Mensaje</label>
-                                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-block">
-                                Enviar Solicitud de Demo
-                            </button>
-                            <p class="form-note">Al enviar, aceptas ser contactado sobre nuestros servicios.</p>
-                        </form>
+                    <div class="value-chip">
+                        <span class="value-chip-icon">&#9670;</span>
+                        Innovadores
+                    </div>
+                    <div class="value-chip">
+                        <span class="value-chip-icon">&#9671;</span>
+                        Colaborativos
+                    </div>
+                    <div class="value-chip">
+                        <span class="value-chip-icon">&#9733;</span>
+                        Formacion de Excelencia
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
 
-    <!-- Footer -->
+            <div class="vision-block">
+                <blockquote class="vision-quote">
+                    <svg class="vision-quote-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                        <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/>
+                        <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/>
+                    </svg>
+                    <p>Abrir las puertas para que todo tipo de empresas entren a la nueva era de la tecnologia, se mantengan competitivas, y escalen sus operaciones con tecnologias y oportunidades accesibles para todos.</p>
+                    <cite class="vision-cite">— Optune S.A.S.</cite>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         TESTIMONIALS
+         ═══════════════════════════════════ -->
+    <section class="testimonials" id="testimonios">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-tag">Testimonios</span>
+                <h2 class="section-title">Lo que dicen <span class="gradient-text">nuestros clientes</span></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                    </div>
+                    <p class="testimonial-text">"Optune transformo nuestro servicio al cliente. Ahora atendemos el doble de consultas en la mitad del tiempo. La implementacion fue rapida y el equipo siempre estuvo ahi para apoyarnos."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">CR</div>
+                        <div>
+                            <span class="testimonial-name">Carlos Ruiz</span>
+                            <span class="testimonial-role">CEO, Distribuidora del Sur</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                    </div>
+                    <p class="testimonial-text">"La gestion de inventarios con IA nos permitio reducir perdidas por mermas en un 40%. Ahora tenemos visibility en tiempo real de todo nuestro stock. Recomiendo a Optune 100%."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MG</div>
+                        <div>
+                            <span class="testimonial-name">Maria Gutierrez</span>
+                            <span class="testimonial-role">Directora de Operaciones, FreshMarket</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                    </div>
+                    <p class="testimonial-text">"Como PME, pensabamos que la automatizacion estaba fuera de nuestro alcance. Optune nos demostro que no. Su asistente IA nos ahorra horas de trabajo todos los dias."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AL</div>
+                        <div>
+                            <span class="testimonial-name">Andres Lopez</span>
+                            <span class="testimonial-role">Fundador, TechPyme</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         CONTACT — WITH LOTTIE-STYLE
+         ═══════════════════════════════════ -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-tag">Contactanos</span>
+                <h2 class="section-title">Listo para <span class="gradient-text">Transformar tu Negocio?</span></h2>
+                <p class="section-desc">
+                    Hablemos sobre como la automatizacion con IA puede ayudar a tu negocio a crecer. 
+                    Solicita una demo y descubre de primera mano como nuestras soluciones pueden optimizar tus operaciones.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <svg class="contact-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="M22 7l-10 7L2 7"/>
+                        </svg>
+                        <span class="contact-card-label">Escribenos a</span>
+                        <a href="mailto:optune@optune.tech" class="contact-card-value">optune@optune.tech</a>
+                    </div>
+                    <div class="contact-card">
+                        <svg class="contact-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        <span class="contact-card-label">Tiempo de respuesta</span>
+                        <span class="contact-card-value">Dentro de 24 horas</span>
+                    </div>
+                    <div class="contact-card">
+                        <svg class="contact-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <span class="contact-card-label">Atendemos</span>
+                        <span class="contact-card-value">Empresas en Colombia y Latinoamerica</span>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrap">
+                    <form id="contact-form" class="contact-form" novalidate>
+                        <h3 class="form-title">Solicitar una Demo</h3>
+                        <div class="form-group">
+                            <label for="nombre">Nombre <span class="required">*</span></label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+                            <span class="form-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="tu@empresa.com">
+                            <span class="form-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="empresa">Empresa</label>
+                            <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa">
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuentanos sobre tu proyecto..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit" id="formSubmitBtn">
+                            <span class="btn-submit-text">Enviar Solicitud de Demo</span>
+                            <span class="btn-submit-loader"></span>
+                        </button>
+                        <p class="form-note">Al enviar, aceptas ser contactado sobre nuestros servicios.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         FOOTER — MODERN
+         ═══════════════════════════════════ -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-top">
                 <div class="footer-brand">
-                    <a href="#" class="logo">
-                        <img src="./assets/OptuneLogo.jpg" alt="Logo" class="logo-image">
-                    </a>
-                    <p class="footer-desc">Soluciones empresariales con IA para PyMEs en Colombia y Latinoamérica.</p>
+                    <img src="./assets/OptuneLogo.jpg" alt="Optune" class="footer-logo">
+                    <p class="footer-brand-desc">Soluciones empresariales con IA para PyMEs en Colombia y Latinoamerica.</p>
                 </div>
                 <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Navegación</h4>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Navegacion</h4>
                         <a href="#servicios">Servicios</a>
                         <a href="#nosotros">Nosotros</a>
+                        <a href="#testimonios">Testimonios</a>
                         <a href="#contacto">Contacto</a>
                     </div>
-                    <div class="footer-column">
-                        <h4>Legal</h4>
-                        <a href="#privacidad" id="privacy-link">Política de Privacidad</a>
-                        <a href="#terminos">Términos de Servicio</a>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Legal</h4>
+                        <a href="#" id="privacy-link">Politica de Privacidad</a>
+                        <a href="#">Terminos de Servicio</a>
                     </div>
-                    <div class="footer-column">
-                        <h4>Contacto</h4>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Contacto</h4>
                         <a href="mailto:optune@optune.tech">optune@optune.tech</a>
-                        <span>Medellín, Colombia</span>
+                        <span>Medellin, Colombia</span>
                     </div>
                 </div>
             </div>
+            <div class="footer-divider"></div>
             <div class="footer-bottom">
-                <p class="footer-legal">
-                    <strong>Optune S.A.S.</strong> — NIT: 901.XXX.XXX-X<br>
-                    Medellín, Colombia
-                </p>
-                <p class="footer-copy">© 2024 Optune. Todos los derechos reservados.</p>
+                <p><strong>Optune S.A.S.</strong> &mdash; NIT: 901.XXX.XXX-X &middot; Medellin, Colombia</p>
+                <p>&copy; 2024 Optune. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Privacy Policy Modal -->
-    <div id="privacy-modal" class="modal">
-        <div class="modal-content">
+    <!-- ═══════════════════════════════════
+         PRIVACY MODAL
+         ═══════════════════════════════════ -->
+    <div class="modal" id="privacy-modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-panel">
             <button class="modal-close" aria-label="Cerrar">&times;</button>
-            <h2>Política de Privacidad</h2>
+            <h2>Politica de Privacidad</h2>
             <div class="modal-body">
-                <p><strong>Última actualización:</strong> Enero 2024</p>
-                
-                <h3>1. Información que Recopilamos</h3>
-                <p>Recopilamos información que nos proporcionas directamente, como tu nombre, correo electrónico, nombre de empresa y cualquier mensaje que nos envíes a través de nuestro formulario de contacto.</p>
-                
-                <h3>2. Uso de la Información</h3>
-                <p>Utilizamos la información recopilada para:</p>
+                <p><strong>Ultima actualizacion:</strong> Enero 2024</p>
+                <h3>1. Informacion que Recopilamos</h3>
+                <p>Recopilamos informacion que nos proporcionas directamente, como tu nombre, correo electronico, nombre de empresa y cualquier mensaje que nos envies a traves de nuestro formulario de contacto.</p>
+                <h3>2. Uso de la Informacion</h3>
+                <p>Utilizamos la informacion recopilada para:</p>
                 <ul>
                     <li>Responder a tus consultas y solicitudes</li>
-                    <li>Enviarte información sobre nuestros servicios</li>
+                    <li>Enviarte informacion sobre nuestros servicios</li>
                     <li>Mejorar nuestros productos y servicios</li>
                     <li>Cumplir con obligaciones legales</li>
                 </ul>
-                
-                <h3>3. Protección de Datos</h3>
-                <p>Implementamos medidas de seguridad técnicas y organizativas para proteger tu información personal contra acceso no autorizado, alteración, divulgación o destrucción.</p>
-                
+                <h3>3. Proteccion de Datos</h3>
+                <p>Implementamos medidas de seguridad tecnicas y organizativas para proteger tu informacion personal contra acceso no autorizado, alteracion, divulgacion o destruccion.</p>
                 <h3>4. Tus Derechos</h3>
-                <p>Tienes derecho a acceder, rectificar, eliminar o limitar el procesamiento de tus datos personales. Para ejercer estos derechos, contáctanos a optune@optune.tech</p>
-                
+                <p>Tienes derecho a acceder, rectificar, eliminar o limitar el procesamiento de tus datos personales. Para ejercer estos derechos, contactanos a optune@optune.tech</p>
                 <h3>5. Contacto</h3>
-                <p>Para cualquier pregunta sobre esta política, contáctanos:</p>
-                <p><strong>Optune S.A.S.</strong><br>
-                Email: optune@optune.tech<br>
-                Medellín, Colombia</p>
+                <p><strong>Optune S.A.S.</strong><br>Email: optune@optune.tech<br>Medellin, Colombia</p>
             </div>
         </div>
     </div>
