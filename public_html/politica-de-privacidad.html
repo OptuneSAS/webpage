@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Optune - Política de Privacidad. Conoce cómo recopilamos, usamos y protegemos tus datos personales.">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Política de Privacidad — Optune">
+    <meta property="og:description" content="Conoce cómo Optune recopila, usa y protege tus datos personales.">
+    
+    <title>Política de Privacidad — Optune</title>
+    
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ============================================================
+           OPTUNE — PRIVACY POLICY PAGE
+           Same design system as main page
+           Colors: #0c1c2b (deep navy) | #00aeef (cyan) | #00fff7 (mint)
+           Fonts: Inter + Space Grotesk
+           ============================================================ */
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{
+            font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+            background:#0c1c2b;
+            color:#fff;
+            line-height:1.6;
+            -webkit-font-smoothing:antialiased;
+            overflow-x:hidden;
+        }
+        a{color:inherit;text-decoration:none}
+        img{max-width:100%;height:auto}
+        ul{list-style:none}
+
+        :root{
+            --navy:#0c1c2b;
+            --navy-light:#0f2436;
+            --navy-lighter:#142e44;
+            --cyan:#00aeef;
+            --cyan-dark:#0099d6;
+            --mint:#00fff7;
+            --text:#fff;
+            --text-secondary:#a0b4c8;
+            --text-muted:#6b7f94;
+            --border:rgba(255,255,255,0.08);
+            --border-light:rgba(255,255,255,0.04);
+            --radius-sm:8px;
+            --radius-md:12px;
+            --radius-lg:20px;
+            --radius-xl:28px;
+            --container:880px;
+            --font-display:'Space Grotesk','Inter',sans-serif;
+            --transition:0.4s cubic-bezier(0.22,1,0.36,1);
+        }
+
+        .container{max-width:var(--container);margin:0 auto;padding:0 24px}
+
+        /* ── NAVBAR ── */
+        .navbar{
+            position:fixed;top:0;left:0;right:0;
+            z-index:1000;
+            padding:0 24px;
+            background:rgba(12,28,43,0.85);
+            backdrop-filter:blur(24px) saturate(1.4);
+            border-bottom:1px solid var(--border);
+            transition:var(--transition);
+        }
+        .navbar.scrolled{background:rgba(12,28,43,0.97)}
+        .nav-container{
+            max-width:1200px;
+            margin:0 auto;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            height:72px;
+        }
+        .nav-logo-img{height:32px;width:auto}
+        .nav-links{display:flex;align-items:center;gap:28px}
+        .nav-link{
+            font-size:0.9rem;
+            font-weight:500;
+            color:var(--text-secondary);
+            transition:color 0.25s;
+            position:relative;
+        }
+        .nav-link::after{
+            content:'';
+            position:absolute;bottom:-4px;left:0;
+            width:0;height:2px;
+            background:var(--cyan);
+            transition:width 0.3s;
+            border-radius:2px;
+        }
+        .nav-link:hover{color:#fff}
+        .nav-link:hover::after{width:100%}
+
+        .btn-neon{
+            position:relative;
+            display:inline-flex;
+            align-items:center;
+            padding:10px 22px;
+            font-size:0.85rem;
+            font-weight:600;
+            color:#fff;
+            background:transparent;
+            border:1px solid var(--cyan);
+            border-radius:var(--radius-sm);
+            overflow:hidden;
+            transition:var(--transition);
+            cursor:pointer;
+        }
+        .btn-neon::before{
+            content:'';
+            position:absolute;inset:0;
+            background:linear-gradient(135deg,var(--cyan),var(--mint));
+            opacity:0.1;
+            transition:opacity 0.4s;
+        }
+        .btn-neon:hover::before{opacity:0.25}
+        .btn-neon:hover{
+            box-shadow:0 0 30px rgba(0,174,239,0.25),0 0 60px rgba(0,174,239,0.1);
+            transform:translateY(-1px);
+        }
+        .btn-neon-reflex{
+            position:absolute;
+            top:-50%;left:-50%;
+            width:200%;height:200%;
+            background:conic-gradient(from 0deg at 50% 50%,
+                transparent 0deg,rgba(0,174,239,0.1) 45deg,transparent 90deg);
+            animation:neonSpin 4s linear infinite;
+            pointer-events:none;
+        }
+        @keyframes neonSpin{to{transform:rotate(360deg)}}
+
+        .nav-hamburger{
+            display:none;
+            flex-direction:column;
+            gap:5px;
+            padding:8px;
+            background:none;
+            border:none;
+            cursor:pointer;
+        }
+        .nav-hamburger span{
+            display:block;
+            width:26px;height:2px;
+            background:var(--text);
+            border-radius:2px;
+            transition:var(--transition);
+        }
+        .nav-hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+        .nav-hamburger.active span:nth-child(2){opacity:0}
+        .nav-hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+        /* ── HERO (compact) ── */
+        .page-hero{
+            padding:120px 24px 60px;
+            background:linear-gradient(180deg, rgba(0,174,239,0.06) 0%, transparent 100%);
+            border-bottom:1px solid var(--border);
+            text-align:center;
+        }
+        .page-hero-title{
+            font-family:var(--font-display);
+            font-size:clamp(2rem,4vw,3rem);
+            font-weight:700;
+            margin-bottom:12px;
+        }
+        .page-hero-sub{
+            color:var(--text-secondary);
+            font-size:1rem;
+        }
+        .page-hero-sub strong{color:var(--mint);font-weight:500}
+
+        /* ── CONTENT ── */
+        .privacy-content{
+            padding:60px 0 100px;
+        }
+        .privacy-section{
+            margin-bottom:40px;
+        }
+        .privacy-section:last-child{margin-bottom:0}
+
+        .privacy-section h2{
+            font-family:var(--font-display);
+            font-size:1.4rem;
+            font-weight:600;
+            color:var(--mint);
+            margin-bottom:16px;
+            padding-bottom:8px;
+            border-bottom:1px solid var(--border);
+        }
+        .privacy-section h3{
+            font-family:var(--font-display);
+            font-size:1.1rem;
+            font-weight:600;
+            color:var(--cyan);
+            margin:24px 0 12px;
+        }
+        .privacy-section p{
+            color:var(--text-secondary);
+            line-height:1.8;
+            margin-bottom:12px;
+            font-size:0.95rem;
+        }
+        .privacy-section ul{
+            margin:12px 0 20px;
+            padding-left:24px;
+        }
+        .privacy-section ul li{
+            color:var(--text-secondary);
+            line-height:1.8;
+            margin-bottom:8px;
+            font-size:0.95rem;
+            position:relative;
+            padding-left:8px;
+        }
+        .privacy-section ul li::before{
+            content:'';
+            position:absolute;
+            left:-16px;
+            top:10px;
+            width:6px;height:6px;
+            background:var(--cyan);
+            border-radius:50%;
+            opacity:0.5;
+        }
+
+        /* Highlight info boxes */
+        .info-box{
+            background:linear-gradient(135deg,rgba(0,174,239,0.06),rgba(0,255,247,0.03));
+            border:1px solid rgba(0,174,239,0.15);
+            border-radius:var(--radius-md);
+            padding:24px;
+            margin:20px 0;
+        }
+        .info-box strong{color:var(--mint);font-weight:600}
+        .info-box p:last-child{margin-bottom:0}
+
+        .last-updated{
+            display:inline-block;
+            padding:6px 16px;
+            background:rgba(0,174,239,0.08);
+            border:1px solid rgba(0,174,239,0.2);
+            border-radius:100px;
+            font-size:0.85rem;
+            color:var(--cyan);
+            margin-bottom:32px;
+        }
+
+        /* ── BACK LINK ── */
+        .back-link{
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+            color:var(--cyan);
+            font-weight:500;
+            font-size:0.9rem;
+            margin-bottom:32px;
+            transition:color 0.25s;
+        }
+        .back-link:hover{color:var(--mint)}
+        .back-link svg{width:16px;height:16px}
+
+        /* ── FOOTER ── */
+        .footer{
+            padding:48px 0 24px;
+            border-top:1px solid var(--border);
+            background:#081420;
+        }
+        .footer-inner{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            flex-wrap:wrap;gap:16px;
+        }
+        .footer-logo{height:28px;width:auto}
+        .footer p{
+            font-size:0.8rem;
+            color:var(--text-muted);
+        }
+        .footer a{color:var(--text-secondary);transition:color 0.25s}
+        .footer a:hover{color:var(--cyan)}
+
+        /* ── RESPONSIVE ── */
+        @media(max-width:768px){
+            .nav-links{display:none}
+            .nav-hamburger{display:flex}
+            .nav-links.open{
+                display:flex;flex-direction:column;
+                position:absolute;top:72px;left:0;right:0;
+                background:rgba(12,28,43,0.98);
+                backdrop-filter:blur(24px);
+                padding:24px;
+                border-bottom:1px solid var(--border);
+                gap:16px;
+            }
+            .page-hero{padding:100px 20px 40px}
+            .privacy-content{padding:40px 0 60px}
+            .footer-inner{flex-direction:column;text-align:center}
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════
+         NAVBAR
+         ═══════════════════════════════════ -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="./index.html" class="nav-logo">
+                <img src="./assets/OptuneLogo.jpg" alt="Optune" class="nav-logo-img">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="./index.html#servicios" class="nav-link">Servicios</a>
+                <a href="./index.html#nosotros" class="nav-link">Nosotros</a>
+                <a href="./index.html#testimonios" class="nav-link">Testimonios</a>
+                <a href="./index.html#contacto" class="nav-link">Contacto</a>
+                <a href="./index.html#contacto" class="btn-neon">
+                    <span class="btn-neon-text">Solicitar Demo</span>
+                    <span class="btn-neon-reflex"></span>
+                </a>
+            </div>
+            <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ═══════════════════════════════════
+         HERO
+         ═══════════════════════════════════ -->
+    <section class="page-hero">
+        <div class="container">
+            <a href="./index.html" class="back-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Volver a Optune
+            </a>
+            <h1 class="page-hero-title">Pol&iacute;tica de <span class="gradient-text">Privacidad</span></h1>
+            <p class="page-hero-sub">Actualizada: <strong>Junio 2026</strong> &middot; Optune S.A.S.</p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         PRIVACY CONTENT
+         ═══════════════════════════════════ -->
+    <section class="privacy-content">
+        <div class="container">
+
+            <div class="last-updated">&Uacute;ltima actualizaci&oacute;n: Junio 2025</div>
+
+            <!-- 1. Identificacion -->
+            <div class="privacy-section">
+                <h2>1. Identificaci&oacute;n del Responsable</h2>
+                <p><strong>Optune S.A.S.</strong> es una sociedad colombiana comprometida con la protecci&oacute;n de datos personales de sus usuarios y clientes.</p>
+                <ul>
+                    <li><strong>Raz&oacute;n Social:</strong> Optune S.A.S.</li>
+                    <li><strong>Correo electr&oacute;nico:</strong> <a href="mailto:optune@optune.tech" style="color:var(--cyan)">optune@optune.tech</a></li>
+                    <li><strong>Direcci&oacute;n:</strong> Medell&iacute;n, Colombia</li>
+                    <li><strong>Sitio web:</strong> <a href="https://optune.tech" style="color:var(--cyan)">optune.tech</a></li>
+                </ul>
+            </div>
+
+            <!-- 2. Datos recopilados -->
+            <div class="privacy-section">
+                <h2>2. Datos que Recopilamos</h2>
+                <p>Recopilamos informaci&oacute;n personal a trav&eacute;s de los siguientes canales:</p>
+
+                <h3>2.1 Formulario &quot;Solicitar Demo&quot; (Sitio Web)</h3>
+                <p>Cuando un usuario completa el formulario de solicitud de demo en nuestro sitio web, recopilamos:</p>
+                <ul>
+                    <li>Nombre completo</li>
+                    <li>Direcci&oacute;n de correo electr&oacute;nico</li>
+                    <li>Nombre de la empresa (opcional)</li>
+                    <li>Mensaje o descripci&oacute;n del proyecto (opcional)</li>
+                </ul>
+
+                <h3>2.2 Automatizaci&oacute;n de Instagram (Comentarios)</h3>
+                <p>A trav&eacute;s de nuestras herramientas de automatizaci&oacute;n en Instagram, recopilamos datos de usuarios que interact&uacute;an con nuestras publicaciones, incluyendo:</p>
+                <ul>
+                    <li>Nombre de usuario de Instagram</li>
+                    <li>Comentarios y mensajes directos p&uacute;blicos</li>
+                    <li>Metadatos de interacci&oacute;n (fecha y hora del comentario)</li>
+                </ul>
+
+                <h3>2.3 Datos T&eacute;cnicos Autom&aacute;ticos</h3>
+                <p>Cuando visitas nuestro sitio web, cierta informaci&oacute;n t&eacute;cnica se recopila autom&aacute;ticamente:</p>
+                <ul>
+                    <li>Direcci&oacute;n IP</li>
+                    <li>Tipo de navegador y versi&oacute;n</li>
+                    <li>P&aacute;ginas visitadas y tiempo de navegaci&oacute;n</li>
+                    <li>Cookies t&eacute;cnicas necesarias para el funcionamiento del sitio</li>
+                </ul>
+            </div>
+
+            <!-- 3. Finalidad -->
+            <div class="privacy-section">
+                <h2>3. Finalidad del Tratamiento de Datos</h2>
+                <p>Utilizamos los datos personales recopilados para las siguientes finalidades:</p>
+                <ul>
+                    <li><strong>Responder solicitudes de demo:</strong> Contactar a los interesados para agendar y realizar demostraciones personalizadas de nuestras soluciones.</li>
+                    <li><strong>Gesti&oacute;n comercial:</strong> Enviar informaci&oacute;n sobre nuestros servicios, promociones y novedades relacionadas con Optune.</li>
+                    <li><strong>An&aacute;lisis de mercado:</strong> Identificar tendencias, intereses y necesidades de nuestros clientes potenciales a partir de comentarios en redes sociales.</li>
+                    <li><strong>Mejora de productos:</strong> Utilizar la retroalimentaci&oacute;n recibida para optimizar nuestras soluciones de IA.</li>
+                    <li><strong>Cumplimiento legal:</strong> Atender obligaciones regulatorias y requerimientos judiciales o administrativos.</li>
+                </ul>
+            </div>
+
+            <!-- 4. Base legal -->
+            <div class="privacy-section">
+                <h2>4. Base Legal para el Tratamiento</h2>
+                <p>El tratamiento de sus datos personales se fundamenta en las siguientes bases jur&iacute;dicas, de conformidad con la Ley 1581 de 2012 (R&eacute;gimen General de Protecci&oacute;n de Datos Personales en Colombia) y el Decreto 1377 de 2013:</p>
+                <ul>
+                    <li><strong>Consentimiento del titular:</strong> Al diligenciar el formulario de contacto o al interactuar con nuestras publicaciones en Instagram, el usuario otorga su consentimiento libre, previo, expreso e informado para el tratamiento de sus datos.</li>
+                    <li><strong>Ejecuci&oacute;n de acciones precontractuales:</strong> El tratamiento es necesario para atender solicitudes de informaci&oacute;n y cotizaciones solicitadas por el interesado.</li>
+                    <li><strong>Inter&eacute;s leg&iacute;timo:</strong> Para fines de mejora de servicios, an&aacute;lisis de mercado y comunicaciones comerciales directas, siempre que no prevalezcan los derechos e intereses del titular.</li>
+                </ul>
+                <div class="info-box">
+                    <p><strong>Importante:</strong> El usuario puede revocar su consentimiento en cualquier momento contact&aacute;ndonos a trav&eacute;s del correo <a href="mailto:optune@optune.tech" style="color:var(--cyan)">optune@optune.tech</a>.</p>
+                </div>
+            </div>
+
+            <!-- 5. Terceros -->
+            <div class="privacy-section">
+                <h2>5. Compartici&oacute;n con Terceros</h2>
+                <p>Optune S.A.S. no vende, alquila ni cede datos personales a terceros no autorizados. Sin embargo, podemos compartir informaci&oacute;n con:</p>
+                <ul>
+                    <li><strong>Proveedores de servicios tecnol&oacute;gicos:</strong> Plataformas de hosting, servicios de correo electr&oacute;nico, herramientas de CRM y an&aacute;lisis de datos que operan bajo estrictos acuerdos de confidencialidad.</li>
+                    <li><strong>Autoridades competentes:</strong> Cuando sea requerido por ley, orden judicial o solicitud de entidad regulatoria.</li>
+                    <li><strong>Redes sociales (Instagram/Meta):</strong> Los datos recopilados a trav&eacute;s de Instagram est&aacute;n sujetos a las pol&iacute;ticas de privacidad de Meta Platforms, Inc.</li>
+                </ul>
+                <p>Todos nuestros proveedores cumplen con la normativa colombiana de protecci&oacute;n de datos y garantizan niveles adecuados de seguridad.</p>
+            </div>
+
+            <!-- 6. Derechos de los usuarios -->
+            <div class="privacy-section">
+                <h2>6. Derechos de los Titulares de Datos</h2>
+                <p>De conformidad con la Ley 1581 de 2012, como titular de datos personales tienes los siguientes derechos:</p>
+                <ul>
+                    <li><strong>Acceder:</strong> Conocer qu&eacute; datos personales tuyos tenemos almacenados y para qu&eacute; los usamos.</li>
+                    <li><strong>Rectificar:</strong> Solicitar la correcci&oacute;n de datos inexactos, incompletos o desactualizados.</li>
+                    <li><strong>Suprimir:</strong> Solicitar la eliminaci&oacute;n de tus datos cuando consideres que no est&aacute;n siendo tratados conforme a la ley.</li>
+                    <li><strong>Oponerse:</strong> Negarte al tratamiento de tus datos para finalidades espec&iacute;ficas, como comunicaciones comerciales.</li>
+                    <li><strong>Revocar el consentimiento:</strong> Retirar en cualquier momento la autorizaci&oacute;n otorgada para el tratamiento de tus datos.</li>
+                </ul>
+                <div class="info-box">
+                    <p><strong>Para ejercer tus derechos:</strong> Env&iacute;a un correo a <a href="mailto:optune@optune.tech" style="color:var(--cyan)">optune@optune.tech</a> con el asunto &quot;Derechos ARCO&quot; indicando tu nombre completo, el derecho que deseas ejercer y los motivos de tu solicitud. Responderemos en un plazo m&aacute;ximo de 15 d&iacute;as h&aacute;biles.</p>
+                </div>
+            </div>
+
+            <!-- 7. Seguridad -->
+            <div class="privacy-section">
+                <h2>7. Medidas de Seguridad</h2>
+                <p>Implementamos medidas t&eacute;cnicas, administrativas y f&iacute;sicas para proteger tus datos personales contra accesos no autorizados, p&eacute;rdida, alteraci&oacute;n o divulgaci&oacute;n:</p>
+                <ul>
+                    <li>Cifrado SSL/TLS en todas las comunicaciones web.</li>
+                    <li>Almacenamiento seguro en servidores con acceso restringido y autenticaci&oacute;n multifactor.</li>
+                    <li>Pol&iacute;ticas internas de confidencialidad y manejo de datos para todos nuestros empleados y colaboradores.</li>
+                    <li>Monitoreo peri&oacute;dico de vulnerabilidades y actualizaciones de seguridad.</li>
+                    <li>Copias de seguridad cifradas con retenci&oacute;n limitada.</li>
+                </ul>
+            </div>
+
+            <!-- 8. Retencion -->
+            <div class="privacy-section">
+                <h2>8. Periodo de Retenci&oacute;n de Datos</h2>
+                <p>Conservaremos tus datos personales durante el tiempo necesario para cumplir con las finalidades descritas en esta pol&iacute;tica, a menos que la ley exija un periodo de retenci&oacute;n mayor:</p>
+                <ul>
+                    <li><strong>Datos de formulario de contacto/demo:</strong> Hasta 2 a&ntilde;os desde la &uacute;ltima interacci&oacute;n o hasta que solicites su eliminaci&oacute;n.</li>
+                    <li><strong>Datos de Instagram:</strong> Hasta 1 a&ntilde;o desde la recolecci&oacute;n, sujeto a las pol&iacute;ticas de retenci&oacute;n de Meta.</li>
+                    <li><strong>Datos t&eacute;cnicos (IP, cookies):</strong> Hasta 6 meses, salvo requerimiento legal en contrario.</li>
+                    <li><strong>Datos contables o fiscales:</strong> Hasta 10 a&ntilde;os seg&uacute;n lo dispuesto por la normativa colombiana.</li>
+                </ul>
+                <p>Una vez cumplido el periodo de retenci&oacute;n, los datos ser&aacute;n eliminados de forma segura o anonimizados para fines estad&iacute;sticos.</p>
+            </div>
+
+            <!-- 9. Cookies -->
+            <div class="privacy-section">
+                <h2>9. Uso de Cookies</h2>
+                <p>Nuestro sitio web utiliza cookies estrictamente necesarias para el correcto funcionamiento t&eacute;cnico. No utilizamos cookies de rastreo publicitario ni de terceros sin consentimiento expl&iacute;cito.</p>
+                <p>Puedes configurar tu navegador para rechazar todas las cookies o para indicar cu&aacute;ndo se env&iacute;a una cookie. Sin embargo, algunas funcionalidades del sitio podr&iacute;an no funcionar correctamente.</p>
+            </div>
+
+            <!-- 10. Redes Sociales -->
+            <div class="privacy-section">
+                <h2>10. Redes Sociales e Instagram</h2>
+                <p>Optune S.A.S. utiliza herramientas de automatizaci&oacute;n para interactuar con usuarios en Instagram (plataforma propiedad de Meta Platforms, Inc.). Al comentar en nuestras publicaciones o enviarnos mensajes directos, aceptas que:</p>
+                <ul>
+                    <li>Tus comentarios pueden ser recopilados y almacenados en nuestros sistemas internos con fines de an&aacute;lisis y prospecci&oacute;n comercial.</li>
+                    <li>La informaci&oacute;n compartida en Instagram tambi&eacute;n est&aacute; sujeta a la <a href="https://privacycenter.instagram.com/policy/" target="_blank" style="color:var(--cyan)">Pol&iacute;tica de Privacidad de Meta</a>.</li>
+                    <li>No recopilamos informaci&oacute;n de perfiles privados ni datos sensibles sin consentimiento expl&iacute;cito.</li>
+                </ul>
+            </div>
+
+            <!-- 11. Contacto -->
+            <div class="privacy-section">
+                <h2>11. Contacto para Consultas de Privacidad</h2>
+                <p>Si tienes preguntas sobre esta pol&iacute;tica de privacidad, deseas ejercer tus derechos ARCO, o necesitas m&aacute;s informaci&oacute;n sobre el tratamiento de tus datos personales, cont&aacute;ctanos:</p>
+                <div class="info-box">
+                    <p><strong>Optune S.A.S.</strong></p>
+                    <p><strong>Correo:</strong> <a href="mailto:optune@optune.tech" style="color:var(--cyan)">optune@optune.tech</a></p>
+                    <p><strong>Asunto:</strong> &quot;Protecci&oacute;n de Datos Personales&quot;</p>
+                    <p><strong>Ubicaci&oacute;n:</strong> Medell&iacute;n, Colombia</p>
+                    <p><strong>Tiempo de respuesta:</strong> M&aacute;ximo 15 d&iacute;as h&aacute;biles</p>
+                </div>
+            </div>
+
+            <!-- 12. Cambios -->
+            <div class="privacy-section">
+                <h2>12. Cambios a esta Pol&iacute;tica</h2>
+                <p>Podemos actualizar esta Pol&iacute;tica de Privacidad peri&oacute;dicamente para reflejar cambios en nuestras pr&aacute;cticas, tecnolog&iacute;as o requisitos legales. Notificaremos cualquier cambio sustancial publicando la nueva versi&oacute;n en esta p&aacute;gina y actualizando la fecha de &quot;&Uacute;ltima actualizaci&oacute;n&quot;.</p>
+                <p>Te recomendamos revisar esta p&aacute;gina peri&oacute;dicamente para mantenerte informado sobre c&oacute;mo protegemos tu informaci&oacute;n.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         FOOTER
+         ═══════════════════════════════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <a href="./index.html">
+                    <img src="./assets/OptuneLogo.jpg" alt="Optune" class="footer-logo">
+                </a>
+                <p>&copy; 2025 <strong>Optune S.A.S.</strong> &mdash; Todos los derechos reservados.</p>
+                <p><a href="./index.html">Volver al inicio</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded',function(){
+        // Navbar scroll effect
+        var navbar = document.getElementById('navbar');
+        window.addEventListener('scroll',function(){
+            if(window.pageYOffset > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+
+        // Mobile menu
+        var hamburger = document.getElementById('navHamburger');
+        var navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click',function(){
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('open');
+        });
+        navLinks.querySelectorAll('a').forEach(function(link){
+            link.addEventListener('click',function(){
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('open');
+            });
+        });
+
+        // Gradient text compatibility
+        var els = document.querySelectorAll('.gradient-text');
+        els.forEach(function(el){
+            el.style.background = 'linear-gradient(135deg, #00aeef, #00fff7)';
+            el.style.webkitBackgroundClip = 'text';
+            el.style.webkitTextFillColor = 'transparent';
+            el.style.backgroundClip = 'text';
+        });
+    });
+    </script>
+</body>
+</html>
