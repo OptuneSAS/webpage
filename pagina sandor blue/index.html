@@ -1,0 +1,373 @@
+<!DOCTYPE html><html lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>SANDOR ACADEMY | Rendimiento Elite para Porteros</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f9f9f9; }
+        ::-webkit-scrollbar-thumb { background: #004aad; }
+        
+        /* Logo mask and visual effects */
+        .logo-sa-mask {
+            object-fit: contain;
+            mix-blend-mode: multiply;
+        }
+        
+        .hero-logo-blur {
+            position: absolute;
+            bottom: -10%;
+            right: -10%;
+            width: 60%;
+            height: 60%;
+            opacity: 0.2;
+            filter: blur(40px);
+            pointer-events: none;
+            z-index: 10;
+            object-fit: cover;
+            object-position: bottom right;
+            transform: scale(1.5);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#f9f9f9",
+                        "primary": "#004aad",
+                        "inverse-surface": "#2f3131",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-container-highest": "#e2e2e2",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#fefcfc",
+                        "surface-bright": "#f9f9f9",
+                        "secondary": "#5f5e5e",
+                        "outline": "#5c6d95",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#0046b3",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#d4e4ff",
+                        "tertiary-container": "#747474",
+                        "surface-dim": "#dadada",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#f0f1f1",
+                        "tertiary-fixed-dim": "#c7c6c6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1a1c1c",
+                        "on-surface-variant": "#2e3d60",
+                        "surface-variant": "#e2e2e2",
+                        "tertiary": "#5c5c5c",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "secondary-container": "#e2dfde",
+                        "on-background": "#1a1c1c",
+                        "primary-container": "#0056d6",
+                        "surface-container": "#eeeeee",
+                        "on-secondary-fixed-variant": "#474746",
+                        "tertiary-fixed": "#e3e2e2",
+                        "surface-container-high": "#e8e8e8",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "on-primary-container": "#fffbff",
+                        "outline-variant": "#b4c8eb",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#636262",
+                        "surface": "#f9f9f9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0rem",
+                        "lg": "0rem",
+                        "xl": "0rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "48px",
+                        "container-max": "1280px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Oswald"],
+                        "label-bold": ["Oswald"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Oswald"],
+                        "body-lg": ["Inter"],
+                        "caption": ["Inter"],
+                        "headline-md": ["Oswald"],
+                        "headline-lg-mobile": ["Oswald"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["80px", {"lineHeight": "1.05", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-bold": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- Brand Header (Centered Logo) -->
+<div class="w-full flex justify-center py-4 bg-white">
+<div class="h-16 w-16 overflow-hidden flex items-center justify-center">
+<img alt="Logo Sandor Academy" class="w-full h-full object-contain scale-[1.5] logo-sa-mask" src="../assets/Sander_academy_logo.png">
+</div>
+</div>
+<!-- TopNavBar -->
+<header class="bg-surface border-b border-surface-container-highest docked full-width top-0 sticky z-50 h-20">
+<nav class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-full">
+<div class="font-display-lg text-headline-md tracking-tighter text-primary">SANDOR ACADEMY</div>
+<div class="hidden md:flex gap-8 items-center h-full">
+<a class="font-label-bold text-label-bold uppercase text-primary border-b-2 border-primary pb-1 transition-colors duration-200" href="#">ENTRENAMIENTO</a>
+<!-- ATLETAS, ACADEMIA, INSTALACIONES eliminados -->
+</div>
+<button class="bg-primary text-white font-label-bold text-label-bold px-6 py-3 uppercase tracking-widest hover:bg-on-surface-variant transition-all Active:opacity-80">
+                ÚNETE A LA ÉLITE
+            </button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="min-h-[80vh] flex flex-col md:flex-row items-center overflow-hidden bg-white">
+<div class="flex-1 px-margin-desktop py-16 flex flex-col justify-center gap-6 transition-all duration-700 opacity-100 translate-y-0">
+<div class="flex flex-row items-center justify-center md:justify-start gap-4">
+<h1 class="font-display-lg text-display-lg text-on-surface">SANDOR ACADEMY</h1>
+<div class="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden flex-shrink-0 border-2 border-primary/30 flex items-center justify-center bg-white shadow-lg">
+<img alt="Logo Sandor Academy" class="w-full h-full object-contain p-1" src="../assets/Sander_academy_logo.png">
+</div>
+</div>
+<p class="font-headline-md text-headline-md text-secondary uppercase tracking-wider">ENTRENAMIENTO MENTAL Y FÍSICO.</p>
+<div class="mt-4">
+<a href="https://wa.me/18633332011" target="_blank" class="bg-primary text-white font-label-bold text-label-bold px-10 py-5 uppercase tracking-widest hover:scale-105 transition-transform inline-block">
+                        RESERVAR SESIÓN
+                    </a>
+</div>
+</div> 
+<div class="flex-1 w-full h-[600px] md:h-screen relative transition-all duration-700 opacity-100 translate-y-0">
+<img alt="Sandor Sandor" class="w-full h-full object-cover grayscale-[20%] contrast-110" src="../assets/sandor_bust.jpeg">
+<img alt="" class="hero-logo-blur" src="../assets/Sander_academy_logo.png">
+<div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent hidden md:block"></div>
+</div>
+</section>
+<!-- Section 2: EL MÉTODO SANDOR -->
+<section class="bg-white py-24 px-margin-desktop">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row-reverse gap-16 items-center transition-all duration-700 opacity-100 translate-y-0">
+<div class="w-full md:w-1/2">
+<div class="border-l-8 border-primary pl-8">
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase mb-6">EL MÉTODO SANDOR</h2>
+<div class="font-body-lg text-body-lg text-secondary max-w-xl space-y-4">
+<p class="">Con sede en Lakeland, Florida, Sandor Academy es más que un simple entrenamiento de porteros: es un entorno de alto rendimiento diseñado para atletas que se niegan a conformarse con la mediocridad.</p>
+<p class="">Nuestra metodología se centra en la precisión técnica, el movimiento explosivo y la fortaleza mental necesaria para dominar el área bajo presión de élite. Cerramos la brecha entre el potencial amateur y la realidad profesional.</p>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 relative">
+<div class="absolute -top-4 -left-4 w-full h-full border-2 border-primary-container -z-10"></div>
+<img alt="" class="w-full shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs0ak-VxkiFwBVxbjDCy04RiIxvV-_dC8AAyRyp7utEH-wmAFxJe7mckfKrsEb3eoO4np4e_Cf3RAO_4C-ZKZMwvu0FdEkbSEuW3wiFjTRS2Qry0J789A4fMR3dGHJTiAVv7-OO5g6BeP5Ghf953Ff5krI0voEjfpCaGjFumL87w4fSED9Cy5RKrB-jY4zs6xQBhqeFl0qGYJ7buJBouf30h-7yUc5L4UFcd7eQOw-d9eu4EICsVhT7eZYbcoj-Fk5xLJn7iKyviEK">
+</div>
+</div>
+</section>
+<!-- Section 3: CONOCE AL ENTRENADOR -->
+<section class="bg-surface-container-low py-24 px-margin-desktop">
+<div class="max-w-container-max mx-auto grid md:grid-cols-2 gap-20 items-center transition-all duration-700 opacity-100 translate-y-0">
+<div class="relative group">
+<img alt="Sandor Entrenador" class="w-full transition-all duration-700 rounded-xl shadow-xl" src="../assets/sandor_back.jpeg">
+<div class="absolute bottom-0 right-0 bg-primary p-6 text-white font-display-lg text-headline-md">
+                        LIDERAZGO
+                    </div>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-8 uppercase">CONOCE AL ENTRENADOR</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed">
+                        Con años de experiencia en preparación de élite, nuestra filosofía de entrenamiento se basa en la misma intensidad que se encuentra en los niveles profesionales más altos. No solo formamos porteros; formamos líderes que se adueñan de su espacio.
+                    </p>
+<ul class="space-y-6">
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: &quot;FILL&quot; 1;">check_circle</span>
+<span class="font-label-bold text-headline-md uppercase">CONSISTENCIA</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: &quot;FILL&quot; 1;">check_circle</span>
+<span class="font-label-bold text-headline-md uppercase">DISCIPLINA</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: &quot;FILL&quot; 1;">check_circle</span>
+<span class="font-label-bold text-headline-md uppercase">PASIÓN</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Section 4: PROGRAMAS DE ENTRENAMIENTO -->
+<section class="bg-white py-24 px-margin-desktop">
+<div class="max-w-container-max mx-auto transition-all duration-700 opacity-100 translate-y-0">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-display-lg uppercase mb-2">PROGRAMAS DE ENTRENAMIENTO</h2>
+<div class="h-1.5 w-32 bg-primary mx-auto"></div>
+</div>
+<div class="grid gap-gutter md:grid-cols-2"><!-- Re-adding cards but updating the container class to 2 columns -->
+<div class="flex flex-col group">
+<div class="relative overflow-hidden h-[300px]">
+<img alt="FIELD PLAYER PRIVATE" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBALnpfRVDI4_dodFm00e6oglih5IYGflJnQ_lQtHGvSH7cUtWXjgzh7P31LPMx3RzmT40X-DYf3FlL8V8CNxN9l4v4-D1-mI801oRypZd1-llmDvNXsWTQ_JW58rGrRfbkkXXaKSRM3NPgVmXidGgqaXfgFIvvmKeV5nIz-QYBXuQ8_WCjrzIu09Wiz0N3dqG3TfNkZ3GsLvHRExzaoaRR487xfQWtHvYy81XDRUmNn2seHauQKmhb6Zu6_SxAH_sd_NpgwSPKmRI8">
+</div>
+<div class="border-t-4 border-primary bg-surface-container p-8 flex-grow transition-all duration-300 group-hover:bg-primary">
+<h3 class="font-headline-lg text-headline-md uppercase mb-4 group-hover:text-white">FIELD PLAYER PRIVATE</h3>
+<p class="font-label-bold text-label-bold text-primary mb-6 group-hover:text-white opacity-80 uppercase">Trabajo 1a1 con jugadores de campo</p>
+<p class="font-body-md text-body-md text-on-surface-variant group-hover:text-white mb-8">Consulta personalizada para jugadores de campo. Llevamos tu juego al siguiente nivel con entrenamientos modernos y de alta intensidad enfocados en el progreso individual.</p>
+</div>
+</div>
+<div class="flex flex-col group">
+<div class="relative overflow-hidden h-[300px]">
+<img alt="GOALKEEPER PRIVATE" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLv3vlpZEPd8VnMH_l_MkqxxL7FwvXYBiqJx032v6aa7uS8GNrnfrDESlmVi__emOwm21stxEr_hT5VmfYCrfG1FZp2wELeOvDG9LLkmpEWksB5dw6sc6SbWEbzx3DxN9xHlK_bRYeIx7TQzuQVz0GS4lE7ejVYbNZaCh1zIzp85P9LKgsiOsmxjr-3AcdsfN_H72mHEJFYth2FZ-tVlzpBHcTgfUV3Tu0gAFXDRCGZipniDazTyUZkcf-g">
+</div>
+<div class="border-t-4 border-primary bg-surface-container p-8 flex-grow transition-all duration-300 group-hover:bg-primary">
+<h3 class="font-headline-lg text-headline-md uppercase mb-4 group-hover:text-white">GOALKEEPER PRIVATE</h3>
+<p class="font-label-bold text-label-bold text-primary mb-6 group-hover:text-white opacity-80 uppercase">Trabajo 1a1 con porteros</p>
+<p class="font-body-md text-body-md text-on-surface-variant group-hover:text-white mb-8">Instrucción técnica superior para porteros. Entrenamientos diseñados para formar campeones con puro corazón, enfocándonos en la disciplina y la pasión por el trabajo.</p>
+</div>
+</div></div>
+</div>
+</section>
+<!-- Section 5: PROBADO AL SIGUIENTE NIVEL -->
+<section class="h-[70vh] relative overflow-hidden flex items-center justify-center">
+<img alt="" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4yrEZzjNMK4K88YGEW5zkA_wrJD0O77BVcr0BA5WQ4nmtwPw8lhSNo5SQ7hDoxsGJ9psiLFm_1EtF0Sk8hQvA3TLWBxQaiSDUrd-NKMlRXwe8QDdK6RpSYRvWht2w0253wDE35Un3mzmc51jbN0juf-T9bVamNzLlvH7ny9F5mAdKSbETifAyidjKe5gZVPu-Qb36GOexmvaaBu-sPL7al2fk-hwG4FRKAQ9vp_K_1OAvIz-KxzpN2jn359q3PIMdo_zLgRQCxNoQ">
+<div class="absolute inset-0 bg-on-surface/40 flex items-center justify-center transition-all duration-700 opacity-100 translate-y-0">
+<div class="text-center px-margin-mobile">
+<h2 class="font-display-lg text-display-lg text-white uppercase mb-4">PROBADO AL SIGUIENTE NIVEL</h2>
+<p class="text-white font-headline-md text-headline-md tracking-widest">ALIANZA CON LAKELAND UNITED</p>
+</div>
+</div>
+</section>
+<!-- Section: VOCES DE PADRES (Testimonials) -->
+<section class="bg-white py-24 px-margin-desktop border-b border-surface-container-highest">
+<div class="max-w-container-max mx-auto transition-all duration-700 opacity-100 translate-y-0">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-display-lg text-on-surface uppercase mb-2">VOCES DE PADRES</h2>
+<div class="h-1.5 w-32 bg-primary mx-auto"></div>
+</div>
+<div class="grid gap-gutter md:grid-cols-3"><!-- Testimonial 1 -->
+<div class="flex flex-col group h-full">
+    <div class="border-t-4 border-primary bg-surface-container p-8 flex-grow transition-all duration-300 hover:bg-primary group">
+        <h3 class="font-headline-lg text-headline-md uppercase mb-4 group-hover:text-white">Entrenamiento de Élite</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant group-hover:text-white mb-8">
+            "Sandor Academy ha transformado la confianza de mi hijo. La técnica y la disciplina que enseñan son inigualables."
+        </p>
+        <div class="mt-auto">
+            <p class="font-label-bold text-label-bold text-primary group-hover:text-white uppercase">Mariana R. • Madre de Atleta</p>
+        </div>
+    </div>
+</div>
+<!-- Testimonial 2 -->
+<div class="flex flex-col group h-full">
+    <div class="border-t-4 border-primary bg-surface-container p-8 flex-grow transition-all duration-300 hover:bg-primary group">
+        <h3 class="font-headline-lg text-headline-md uppercase mb-4 group-hover:text-white">Paciencia y Valores</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant group-hover:text-white mb-8">
+            "Lo que más valoramos es cómo el entrenador se enfoca en el crecimiento personal. Mi hija ha aprendido sobre respeto y esfuerzo constante."
+        </p>
+        <div class="mt-auto">
+            <p class="font-label-bold text-label-bold text-primary group-hover:text-white uppercase">Roberto L. • Padre de Alumna</p>
+        </div>
+    </div>
+</div>
+<!-- Testimonial 3 -->
+<div class="flex flex-col group h-full">
+    <div class="border-t-4 border-primary bg-surface-container p-8 flex-grow transition-all duration-300 hover:bg-primary group">
+        <h3 class="font-headline-lg text-headline-md uppercase mb-4 group-hover:text-white">Progreso Visible</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant group-hover:text-white mb-8">
+            "Desde que comenzó en Sandor Academy, su técnica ha mejorado drásticamente. Un ambiente profesional y acogedor para los niños."
+        </p>
+        <div class="mt-auto">
+            <p class="font-label-bold text-label-bold text-primary group-hover:text-white uppercase">Silvia M. • Familia Sandor</p>
+        </div>
+    </div>
+</div></div>
+</div>
+</section>
+<!-- Section: CONTACTO -->
+<section class="bg-primary py-24 px-margin-desktop">
+<div class="max-w-container-max mx-auto text-center transition-all duration-700 opacity-100 translate-y-0">
+<h2 class="font-display-lg text-display-lg text-white uppercase mb-4">CONTACTO</h2>
+<p class="font-label-bold text-white/80 uppercase mb-16 tracking-widest">ESTAMOS LISTOS PARA LLEVAR TU JUEGO AL SIGUIENTE NIVEL</p>
+<div class="grid md:grid-cols-3 gap-12">
+<a class="flex flex-col items-center gap-6 group" href="https://wa.me/18633332011" target="_blank">
+<div class="w-20 h-20 bg-white flex items-center justify-center rounded-full transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-primary text-4xl">chat</span>
+</div>
+<div class="space-y-1">
+<h3 class="font-label-bold text-white uppercase text-xl">WhatsApp</h3>
+<p class="text-white/90 font-body-md">+1 863-333-2011</p>
+</div>
+</a>
+<a class="flex flex-col items-center gap-6 group" href="tel:8633332011">
+<div class="w-20 h-20 bg-white flex items-center justify-center rounded-full transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-primary text-4xl">call</span>
+</div>
+<div class="space-y-1">
+<h3 class="font-label-bold text-white uppercase text-xl">Llamar</h3>
+<p class="text-white/90 font-body-md">863-333-2011</p>
+</div>
+</a>
+<a class="flex flex-col items-center gap-6 group" href="https://instagram.com/1k.sandor" target="_blank">
+<div class="w-20 h-20 bg-white flex items-center justify-center rounded-full transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-primary text-4xl">photo_camera</span>
+</div>
+<div class="space-y-1">
+<h3 class="font-label-bold text-white uppercase text-xl">Instagram</h3>
+<p class="text-white/90 font-body-md">@1k.sandor</p>
+</div>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface w-full pt-12 pb-8 border-t-4 border-primary">
+<div class="flex flex-col items-center gap-8 w-full px-margin-desktop max-w-container-max mx-auto text-center">
+<div class="font-display-lg text-headline-md text-white">SANDOR ACADEMY</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-caption text-caption uppercase tracking-widest text-secondary-fixed hover:text-white transition-all" href="#">Lakeland, Florida</a>
+<a class="font-caption text-caption uppercase tracking-widest text-secondary-fixed hover:text-white transition-all" href="https://instagram.com/1k.sandor">Instagram</a>
+<a class="font-caption text-caption uppercase tracking-widest text-secondary-fixed hover:text-white transition-all" href="#">Facebook</a>
+<a class="font-caption text-caption uppercase tracking-widest text-secondary-fixed hover:text-white transition-all" href="#">LinkedIn</a>
+</div>
+<p class="font-caption text-caption uppercase tracking-widest text-secondary-fixed/60">
+                © 2024 SANDOR ACADEMY. TODOS LOS DERECHOS RESERVADOS. RENDIMIENTO ELITE PARA PORTEROS.
+            </p>
+</div>
+</footer>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section > div').forEach(el => {
+                el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+                observer.observe(el);
+            });
+        });
+    </script>
+
+
+</body></html>
